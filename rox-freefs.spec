@@ -12,7 +12,6 @@ Patch: FreeFS-2.1.3-fstab-check.patch
 License: GPL
 Group: Graphical desktop/Other
 Url: http://www.kerofin.demon.co.uk/rox/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: librox-c-devel >= 2.1.6
 
 %description
