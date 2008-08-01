@@ -1,6 +1,6 @@
 %define name rox-freefs
 %define version 2.1.4
-%define release %mkrel 5
+%define release %mkrel 6
 %define oname FreeFS
 
 Summary: ROX application to monitor file system usage
