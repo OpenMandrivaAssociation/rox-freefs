@@ -1,0 +1,30 @@
+--- FreeFS/src/configure.in~	2004-11-21 14:19:34.000000000 +0100
++++ FreeFS/src/configure.in	2006-01-02 11:09:26.000000000 +0100
+@@ -71,12 +71,7 @@
+ 
+ dnl Which file contains the mount entries?
+ AC_MSG_CHECKING(for the fs table)
+-FSTAB=/dev/null
+-for f in /etc/vfstab /etc/fstab ; do
+-  if test -r $f ; then
+-    FSTAB=$f
+-  fi
+-done
++FSTAB=/etc/fstab
+ if test $FSTAB = /dev/null ; then
+   AC_MSG_ERROR(not found)
+ else
+@@ -85,12 +80,7 @@
+ fi
+ 
+ AC_MSG_CHECKING(for the mounted fs table)
+-MTAB=/dev/null
+-for f in /etc/mtab /etc/mnttab ; do
+-  if test -r $f ; then
+-    MTAB=$f
+-  fi
+-done
++MTAB=/etc/mtab
+ if test $MTAB = /dev/null ; then
+   AC_MSG_ERROR(not found)
+ else
