@@ -1,18 +1,14 @@
-%define name rox-freefs
-%define version 2.1.4
-%define release %mkrel 7
 %define oname FreeFS
 
-Summary: ROX application to monitor file system usage
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: http://www.kerofin.demon.co.uk/rox/%{oname}-%{version}.tar.bz2
-Patch: FreeFS-2.1.3-fstab-check.patch
-License: GPL
-Group: Graphical desktop/Other
-Url: http://www.kerofin.demon.co.uk/rox/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Summary:	ROX application to monitor file system usage
+Name:		rox-freefs
+Version:	2.1.4
+Release:	8
+License:	GPL
+Group:		Graphical desktop/Other
+Url:		http://www.kerofin.demon.co.uk/rox/
+Source0:	http://www.kerofin.demon.co.uk/rox/%{oname}-%{version}.tar.bz2
+Patch:		FreeFS-2.1.3-fstab-check.patch
 BuildRequires: librox-c-devel >= 2.1.6
 
 %description
@@ -20,26 +16,22 @@ Monitor free space on a file system. This runs as either a panel
 applet or a separate window.
 
 %prep
-%setup -q -n %oname
+%setup -q -n %{oname}
 %patch -p1
-cd src
-autoconf
 
 %build
+pushd src
+autoconf
+popd
 export LIBDIRPATH=%_libdir
 ./AppRun ||:
 
 %install
-rm -rf $RPM_BUILD_ROOT
 mkdir -p %buildroot%_libdir/apps/
 cp -r ../%oname %buildroot%_libdir/apps/
 rm -rf %buildroot%_libdir/apps/%oname/src
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
-%defattr(-,root,root)
 %dir %_libdir/apps/%oname
 %_libdir/apps/%oname/.DirIcon
 %_libdir/apps/%oname/App*
@@ -52,5 +44,4 @@ rm -rf $RPM_BUILD_ROOT
 %_libdir/apps/%oname/choice_install
 %_libdir/apps/%oname/gtkrc
 %_libdir/apps/%oname/rox_run
-
 
