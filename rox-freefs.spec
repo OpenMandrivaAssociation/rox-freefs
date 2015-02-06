@@ -3,7 +3,7 @@
 Summary:	ROX application to monitor file system usage
 Name:		rox-freefs
 Version:	2.1.4
-Release:	8
+Release:	9
 License:	GPL
 Group:		Graphical desktop/Other
 Url:		http://www.kerofin.demon.co.uk/rox/
