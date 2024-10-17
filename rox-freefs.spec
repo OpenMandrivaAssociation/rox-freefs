@@ -6,7 +6,7 @@ Version:	2.1.4
 Release:	9
 License:	GPL
 Group:		Graphical desktop/Other
-Url:		http://www.kerofin.demon.co.uk/rox/
+Url:		https://www.kerofin.demon.co.uk/rox/
 Source0:	http://www.kerofin.demon.co.uk/rox/%{oname}-%{version}.tar.bz2
 Patch:		FreeFS-2.1.3-fstab-check.patch
 BuildRequires: librox-c-devel >= 2.1.6
