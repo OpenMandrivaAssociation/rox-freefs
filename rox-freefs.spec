@@ -9,6 +9,11 @@ Group:		Graphical desktop/Other
 Url:		https://www.kerofin.demon.co.uk/rox/
 Source0:	http://www.kerofin.demon.co.uk/rox/%{oname}-%{version}.tar.bz2
 Patch:		FreeFS-2.1.3-fstab-check.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: librox-c-devel >= 2.1.6
 
 %description
